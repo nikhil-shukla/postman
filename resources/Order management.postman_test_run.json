@@ -1,0 +1,156 @@
+{
+	"id": "d9fd0834-2f15-481e-9c55-e276c0c36536",
+	"name": "Order management",
+	"timestamp": "2022-01-10T06:12:31.649Z",
+	"collection_id": "12237621-59e8dbfa-1041-4a4c-a9d7-c2788e457b30",
+	"folder_id": 0,
+	"environment_id": "cb3830b4-21df-4ebd-a906-b81914d1a81c",
+	"totalPass": 13,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "9794853b-ee59-4bd0-8e7f-58464eb33bd6",
+			"name": "Generate reference",
+			"time": 328,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should contain reference id": true
+			},
+			"testPassFailCounts": {
+				"Should contain reference id": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				731,
+				239,
+				328
+			],
+			"allTests": [
+				{
+					"Should contain reference id": true
+				},
+				{
+					"Should contain reference id": true
+				},
+				{
+					"Should contain reference id": true
+				}
+			]
+		},
+		{
+			"id": "d9ec636f-f603-4e8e-8ca6-9c13d6b86b45",
+			"name": "Create order",
+			"time": 262,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should not be valid": true
+			},
+			"testPassFailCounts": {
+				"Should contain the reference id": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Should contain the customer id": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Should contain the product id": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Should not be valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				315,
+				329,
+				262
+			],
+			"allTests": [
+				{
+					"Should contain the reference id": true,
+					"Should contain the customer id": true,
+					"Should contain the product id": true
+				},
+				{
+					"Should contain the reference id": true,
+					"Should contain the customer id": true,
+					"Should contain the product id": true
+				},
+				{
+					"Should not be valid": true
+				}
+			]
+		},
+		{
+			"id": "13c19154-15ac-462e-8247-d440a666c7e5",
+			"name": "Check status",
+			"time": 327,
+			"responseCode": {
+				"code": 400,
+				"name": "BAD REQUEST"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 500": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				219,
+				244,
+				327
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 500": true
+				},
+				{
+					"Status code is 400": true
+				}
+			]
+		}
+	],
+	"count": 3,
+	"totalTime": 2994,
+	"collection": {
+		"requests": [
+			{
+				"id": "9794853b-ee59-4bd0-8e7f-58464eb33bd6",
+				"method": "GET"
+			},
+			{
+				"id": "d9ec636f-f603-4e8e-8ca6-9c13d6b86b45",
+				"method": "POST"
+			},
+			{
+				"id": "13c19154-15ac-462e-8247-d440a666c7e5",
+				"method": "GET"
+			}
+		]
+	}
+}
